@@ -1,0 +1,16 @@
+D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\EmbedAPITest.exe.config
+D:\src\personal\EmbedAPISample\EmbedAPISample\obj\Debug\EmbedAPITest.exe
+D:\src\personal\EmbedAPISample\EmbedAPISample\obj\Debug\EmbedAPITest.pdb
+D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\EmbedAPITest.exe
+D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\EmbedAPITest.pdb
+D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll
+D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\Microsoft.PowerBI.Api.dll
+D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\Newtonsoft.Json.dll
+D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.xml
+D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.xml
+D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\Microsoft.Rest.ClientRuntime.xml
+D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\Newtonsoft.Json.xml
+D:\src\personal\EmbedAPISample\EmbedAPISample\obj\Debug\EmbedAPISample.csprojResolveAssemblyReference.cache
+D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\EmbedAPISample.exe.config

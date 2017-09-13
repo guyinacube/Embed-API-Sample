@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/EmbedAPISample/bin/Debug/EmbedAPISample.vshost.exe.manifest
+/EmbedAPISample/bin/Debug/EmbedAPISample.vshost.exe.config
+/EmbedAPISample/bin/Debug/EmbedAPISample.vshost.exe
+/EmbedAPISample/bin/Debug/EmbedAPISample.exe.config
+/.vs/EmbedAPISample/v14/.suo
+/EmbedAPISample/obj/Debug/build.force

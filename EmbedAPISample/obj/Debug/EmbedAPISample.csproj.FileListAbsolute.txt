@@ -14,3 +14,4 @@ D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\Microsoft.Rest.ClientRun
 D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\Newtonsoft.Json.xml
 D:\src\personal\EmbedAPISample\EmbedAPISample\obj\Debug\EmbedAPISample.csprojResolveAssemblyReference.cache
 D:\src\personal\EmbedAPISample\EmbedAPISample\bin\Debug\EmbedAPISample.exe.config
+D:\src\Power BI\Embed-API-Sample\EmbedAPISample\bin\Debug\EmbedAPISample.exe.config

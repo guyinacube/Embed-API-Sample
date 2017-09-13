@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.IdentityModel.Clients.ActiveDirectory.Platform</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.IdentityModel.Clients.ActiveDirectory.PromptBehavior">
+            <summary>
+            Indicates whether AcquireToken should automatically prompt only if necessary or whether
+            it should prompt regardless of whether there is a cached token.
+            </summary>
+        </member>
+        <member name="F:Microsoft.IdentityModel.Clients.ActiveDirectory.PromptBehavior.Auto">
+            <summary>
+            Acquire token will prompt the user for credentials only when necessary.  If a token
+            that meets the requirements is already cached then the user will not be prompted.
+            </summary>
+        </member>
+        <member name="F:Microsoft.IdentityModel.Clients.ActiveDirectory.PromptBehavior.Always">
+            <summary>
+            The user will be prompted for credentials even if there is a token that meets the requirements
+            already in the cache.
+            </summary>
+        </member>
+        <member name="F:Microsoft.IdentityModel.Clients.ActiveDirectory.PromptBehavior.RefreshSession">
+            <summary>
+            Re-authorizes (through displaying webview) the resource usage, making sure that the resulting access
+            token contains updated claims. If user logon cookies are available, the user will not be asked for 
+            credentials again and the logon dialog will dismiss automatically.
+            </summary>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationContinuationHelper">
+            <summary>
+            Static class that consumes the response from the Authentication flow and continues token acquisition. This class should be called in ApplicationDelegate whenever app loads/reloads.
+            </summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationContinuationHelper.IsBrokerResponse(System.String)">
+            <summary>
+            Returns if the response is from the broker app
+            </summary>
+            <param name="sourceApplication">application bundle id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationContinuationHelper.SetBrokerContinuationEventArgs(Foundation.NSUrl)">
+            <summary>
+            Sets broker response for continuing authentication flow.
+            </summary>
+            <param name="url"></param>
+        </member>
+        <member name="T:Microsoft.IdentityModel.Clients.ActiveDirectory.PlatformParameters">
+            <summary>
+            Additional parameters used in acquiring user's authorization
+            </summary>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Clients.ActiveDirectory.PlatformParameters.#ctor(UIKit.UIViewController)">
+            <summary>
+            Additional parameters used in acquiring user's authorization
+            </summary>
+            <param name="callerViewController">UIViewController instance</param>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Clients.ActiveDirectory.PlatformParameters.#ctor(UIKit.UIViewController,System.Boolean)">
+            <summary>
+            Additional parameters used in acquiring user's authorization
+            </summary>
+            <param name="callerViewController">UIViewController instance</param>
+            <param name="useBroker">skips calling to broker if broker is present. false, by default</param>
+        </member>
+        <member name="M:Microsoft.IdentityModel.Clients.ActiveDirectory.PlatformParameters.#ctor(UIKit.UIViewController,System.Boolean,Microsoft.IdentityModel.Clients.ActiveDirectory.PromptBehavior)">
+            <summary>
+            Additional parameters used in acquiring user's authorization
+            </summary>
+            <param name="callerViewController">UIViewController instance</param>
+            <param name="useBroker">skips calling to broker if broker is present. false, by default</param>
+            <param name="promptBehavior">Prompt behavior enum to control UI</param>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Clients.ActiveDirectory.PlatformParameters.CallerViewController">
+            <summary>
+            Caller UIViewController
+            </summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Clients.ActiveDirectory.PlatformParameters.UseBroker">
+            <summary>
+            Skips calling to broker if broker is present. false, by default
+            </summary>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Clients.ActiveDirectory.PlatformParameters.PreferredStatusBarStyle">
+            <summary>
+            Sets the preferred status bar style for the login form view controller presented
+            </summary>
+            <value>The preferred status bar style.</value>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Clients.ActiveDirectory.PlatformParameters.ModalTransitionStyle">
+            <summary>
+            Set the transition style used when the login form view is presented
+            </summary>
+            <value>The modal transition style.</value>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Clients.ActiveDirectory.PlatformParameters.ModalPresentationStyle">
+            <summary>
+            Sets the presentation style used when the login form view is presented
+            </summary>
+            <value>The modal presentation style.</value>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Clients.ActiveDirectory.PlatformParameters.TransitioningDelegate">
+            <summary>
+            Sets a custom transitioning delegate to the login form view controller
+            </summary>
+            <value>The transitioning delegate.</value>
+        </member>
+        <member name="P:Microsoft.IdentityModel.Clients.ActiveDirectory.PlatformParameters.PromptBehavior">
+            <summary>
+            Gets prompt behavior. If <see cref="F:Microsoft.IdentityModel.Clients.ActiveDirectory.PromptBehavior.Always"/>, asks service to show user the authentication page which gives them chance to authenticate as a different user.
+            </summary>
+        </member>
+    </members>
+</doc>

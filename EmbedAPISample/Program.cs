@@ -9,17 +9,20 @@ namespace EmbedAPISample
 {
     class Program
     {
-        private static string authorityUrl = "https://login.windows.net/common/oauth2/authorize/";
+        private static string authorityUrl = "https://login.windows.net/common/";
         private static string resourceUrl = "https://analysis.windows.net/powerbi/api";
         private static string apiUrl = "https://api.powerbi.com/";
         private static string embedUrlBase = "https://app.powerbi.com/";
 
+        private static string tenantId = "<TENANT ID>";
         private static string groupId = "<GROUP ID>";
-        private static string username = "<Power BI Account Email Address>";
+        
+        private static string reportId = "<REPORT ID>";
+        private static string datasetId = "<DATASET ID>";
 
-        // Update the Password and Client ID within Secrets.cs
+        // Update the Client ID and Secret within Secrets.cs
 
-        private static UserPasswordCredential credential = null;
+        private static ClientCredential credential = null;
         private static AuthenticationResult authenticationResult = null;
         private static TokenCredentials tokenCredentials = null;
 
@@ -29,7 +32,7 @@ namespace EmbedAPISample
             try
             {
                 // Create a user password cradentials.
-                credential = new UserPasswordCredential(username, Secrets.Password);
+                credential = new ClientCredential(Secrets.ClientID, Secrets.ClientSecret);
 
                 // Authenticate using created credentials
                 Authorize().Wait();
@@ -37,9 +40,9 @@ namespace EmbedAPISample
                 using (var client = new PowerBIClient(new Uri(apiUrl), tokenCredentials))
                 {
 
-                    EmbedToken embedToken = client.Reports.GenerateTokenInGroup(groupId, "<REPORT ID>", new GenerateTokenRequest(accessLevel: "View", datasetId: "<DATASET ID>"));
+                    EmbedToken embedToken = client.Reports.GenerateTokenInGroup(groupId, reportId, new GenerateTokenRequest(accessLevel: "View", datasetId: datasetId));
 
-                    Report report = client.Reports.GetReportInGroup(groupId, "<REPORT ID>");
+                    Report report = client.Reports.GetReportInGroup(groupId, reportId);
 
                     #region Output Embed Token
                     Console.WriteLine("\r*** EMBED TOKEN ***\r");
@@ -47,7 +50,7 @@ namespace EmbedAPISample
                     Console.Write("Report Id: ");
 
                     Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine("<REPORT ID>");
+                    Console.WriteLine(reportId);
                     Console.ResetColor();
 
                     Console.Write("Report Embed Url: ");
@@ -140,9 +143,11 @@ namespace EmbedAPISample
             return Task.Run(async () => {
                 authenticationResult = null;
                 tokenCredentials = null;
+
+                var tenantSpecificURL = authorityUrl.Replace("common", tenantId);
                 var authenticationContext = new AuthenticationContext(authorityUrl);
 
-                authenticationResult = await authenticationContext.AcquireTokenAsync(resourceUrl, Secrets.ClientID, credential);
+                authenticationResult = await authenticationContext.AcquireTokenAsync(resourceUrl, credential);
 
                 if (authenticationResult != null)
                 {

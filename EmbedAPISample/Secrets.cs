@@ -8,10 +8,10 @@ namespace EmbedAPISample
 {
     public class Secrets
     {
-        // Update Power BI Account Password
-        public static string Password = "<PASSWORD>";
-
         // The Azure AD App - Application ID/Client ID
         public static string ClientID = "<CLIENT ID>";
+
+        // The Azure AD App - Client Secret
+        public static string ClientSecret = "<CLIENT ID>";
     }
 }

@@ -10,9 +10,9 @@ You can register your Azure AD app by following the steps in the following [docu
 After you create your Azure AD App, you will want to update the Password and Client ID within secrets.cs.
 
 ```
-// Update Power BI Account Password
-public static string Password = "<PASSWORD>";
-
 // The Azure AD App - Application ID/Client ID
-public static string ClientID = "<CLIENT ID>";
+public static string ClientID = "<ENTER CLIENT/APPLICATION ID>";
+
+// The Azure AD App - Client Secret
+public static string ClientSecret = "<ENTER CLIENT SECRET>";
 ```

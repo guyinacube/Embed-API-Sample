@@ -9,9 +9,9 @@ namespace EmbedAPISample
     public class Secrets
     {
         // The Azure AD App - Application ID/Client ID
-        public static string ClientID = "<CLIENT ID>";
+        public static string ClientID = "<ENTER CLIENT/APPLICATION ID>";
 
         // The Azure AD App - Client Secret
-        public static string ClientSecret = "<CLIENT ID>";
+        public static string ClientSecret = "<ENTER CLIENT SECRET>";
     }
 }
